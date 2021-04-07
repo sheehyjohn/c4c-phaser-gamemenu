@@ -12,7 +12,8 @@ class Menu extends Phaser.Scene {
   preload() {}
 
   create(data) {
-    this.add.text(10, 10, `Menu`, { font: '48px Arial', fill: '#000000' });
+    console.log('--menu.js - start');
+    this.add.text(10, 10, `Menu1`, { font: '48px Arial', fill: '#000000' });
 
     // Add level menu buttons.
     const itemsPerRow = 4;
@@ -30,7 +31,7 @@ class Menu extends Phaser.Scene {
       button.alpha = unlocked ? 1 : 0.5;
       if (unlocked) {
         button.setInteractive();
-        // When menu button is clicked, switch to game scene and pass along the index for the selected level.
+        // When menu button is clicked, switch to game scene and pass along the index for the selected level. 
         button.on('pointerup', () => this.scene.start('GameScene', { levelIndex: i }));
       }
     }

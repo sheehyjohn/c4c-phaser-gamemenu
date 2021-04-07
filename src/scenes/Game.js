@@ -10,6 +10,9 @@ class Game extends Phaser.Scene {
   init(data) {
     this.levelIndex = data.levelIndex;
     this.levelData = levels[this.levelIndex];
+    console.log('--game.js');
+    console.log(this.levelIndex);
+    console.log(this.levelData);
   }
 
   preload() {}
