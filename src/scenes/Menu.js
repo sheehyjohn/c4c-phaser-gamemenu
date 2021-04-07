@@ -13,7 +13,7 @@ class Menu extends Phaser.Scene {
 
   create(data) {
     console.log('--menu.js - start');
-    this.add.text(10, 10, `Menu1`, { font: '48px Arial', fill: '#000000' });
+    this.add.text(10, 10, `Please Select a Level`, { font: '25px Arial', fill: '#000000' });
 
     // Add level menu buttons.
     const itemsPerRow = 4;

@@ -64,8 +64,8 @@ class Game extends Phaser.Scene {
   create(data) {
     this.add.text(10, 10, this.levelData.name, { font: '48px Arial', fill: '#000000' });
 
-    const hero = this.add.sprite(26 + this.levelIndex * 70, 80, 'hero-run-sheet', 1);
-    hero.anims.play('hero-running');
+   // const hero = this.add.sprite(26 + this.levelIndex * 70, 80, 'hero-run-sheet', 1);
+   // hero.anims.play('hero-running');
 
     const loseButton = this.add.text(80, 400, 'Menu', { font: '30px Arial', fill: '#000000' });
     loseButton.setInteractive();
