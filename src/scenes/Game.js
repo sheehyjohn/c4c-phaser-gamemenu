@@ -71,7 +71,7 @@ class Game extends Phaser.Scene {
     const loseButton = this.add.text(80, 400, 'Menu', { font: '30px Arial', fill: '#000000' });
     loseButton.setInteractive();
     loseButton.on('pointerup', this.failLevel, this);
-    const winButton = this.add.text(900, 400, 'Menu', { font: '30px Arial', fill: '#000000' });
+    const winButton = this.add.text(900, 400, 'Win', { font: '30px Arial', fill: '#000000' });
     winButton.setInteractive();
     winButton.on('pointerup', this.completeLevel, this);
 

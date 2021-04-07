@@ -29,6 +29,7 @@ class Menu extends Phaser.Scene {
         }
       );
       button.alpha = unlocked ? 1 : 0.5;
+      //Unlocking all levels from the start
       if (unlocked) {
         button.setInteractive();
         // When menu button is clicked, switch to game scene and pass along the index for the selected level. 
