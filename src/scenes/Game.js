@@ -12,8 +12,8 @@ class Game extends Phaser.Scene {
     this.levelIndex = data.levelIndex;
     this.levelData = levels[this.levelIndex];
     console.log('--game.js');
-    console.log(this.levelIndex);
-    console.log(this.levelData);
+    //console.log(this.levelIndex);
+    //console.log(this.levelData);
   }
 
   preload() {
@@ -131,9 +131,13 @@ class Game extends Phaser.Scene {
   }
 
   addMap() {
+    console.log(this.levelIndex);
+    console.log(this.levelData);
+    console.log('level = ' + this.levelData.map);
+    //this.map = this.make.tilemap({ key: 'level-1' });
+    this.map = this.make.tilemap({ key: this.levelData.map });
 
-    this.map = this.make.tilemap({ key: 'level-1' });
-    //this.map = this.make.tilemap({ key: 'level-1a' });
+    
     const groundTiles = this.map.addTilesetImage('world-1', 'world-1-sheet');
 
     const groundLayer = this.map.createStaticLayer('Ground', groundTiles);

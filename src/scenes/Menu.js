@@ -20,11 +20,11 @@ class Menu extends Phaser.Scene {
     for (let i = 0; i < levels.length; i ++) {
       const unlocked = i <= gameState.maxUnlockedLevel();
       const button = this.add.text(
-        80 + (i % itemsPerRow) * 150, 
-        140 + Math.floor(i / itemsPerRow) * 120, 
+        40 + (i % itemsPerRow) * 150, 
+        70 + Math.floor(i / itemsPerRow) * 120, 
         levels[i].name, 
         {
-          font: '30px Arial',
+          font: '20px Arial',
           fill: '#000000',
         }
       );
