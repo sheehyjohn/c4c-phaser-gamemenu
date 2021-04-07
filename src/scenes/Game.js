@@ -20,6 +20,7 @@ class Game extends Phaser.Scene {
 
     this.load.tilemapTiledJSON('level-1', 'assets/tilemaps/level-1.json');
     this.load.tilemapTiledJSON('level-2', 'assets/tilemaps/level-2.json');
+    this.load.tilemapTiledJSON('level-3', 'assets/tilemaps/level-3.json');
     //this.load.tilemapTiledJSON('level-1a', 'assets/tilemaps/level-1a.json');
 
     this.load.image('world-1-sheet', 'assets/tilesets/world-1.png');
@@ -66,10 +67,10 @@ class Game extends Phaser.Scene {
     const hero = this.add.sprite(26 + this.levelIndex * 70, 80, 'hero-run-sheet', 1);
     hero.anims.play('hero-running');
 
-    const loseButton = this.add.text(300, 10, 'Lose', { font: '40px Arial', fill: '#000000' });
+    const loseButton = this.add.text(80, 400, 'Menu', { font: '30px Arial', fill: '#000000' });
     loseButton.setInteractive();
     loseButton.on('pointerup', this.failLevel, this);
-    const winButton = this.add.text(450, 10, 'Win', { font: '40px Arial', fill: '#000000' });
+    const winButton = this.add.text(900, 400, 'Menu', { font: '30px Arial', fill: '#000000' });
     winButton.setInteractive();
     winButton.on('pointerup', this.completeLevel, this);
 
